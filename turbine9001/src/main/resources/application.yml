@@ -1,0 +1,39 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: turbine9001   #服务名称
+
+logging:
+  config: classpath:logback-boot.xml
+  file:
+    path: /project/logs/demo-springcloud2021/${spring.application.name}
+management:
+  security:
+    enabled: false  #安全开关
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #暴露端口号
+
+hystrix:
+  dashboard:
+    proxy-stream-allow-list: "*"  #
+
+turbine:
+  app-config: provider8001
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+
+eureka:
+  client:
+    register-with-eureka: true   #注册到注册中心
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka     #注册中心地址
+  instance:
+    instance-id: turbine9001    #处理在eureka中的显示
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 4

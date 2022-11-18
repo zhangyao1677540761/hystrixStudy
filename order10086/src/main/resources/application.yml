@@ -1,0 +1,24 @@
+server:
+  port: 10086
+
+spring:
+  application:
+    name: order-10086  #服务名
+
+eureka:
+  instance:
+    instance-id: order-10086    #处理在eureka中的显示
+  client:
+    register-with-eureka: true  #注册到注册中心
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka/   #注册中心地址
+
+ribbon:
+  #建立连接所用时间
+  ReadTimeout: 5000
+  #服务读取数据可用时间
+  ConnectTimeout: 5000   #负载均衡超时配置
+
+logging:
+  level:
+    com.qiumin.client.paymentClient: debug   #eureka日志打印
