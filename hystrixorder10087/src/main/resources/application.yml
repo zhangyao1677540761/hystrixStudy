@@ -16,3 +16,4 @@ eureka:
 feign:
   circuitbreaker:
     enabled: true    #开启服务降级
+

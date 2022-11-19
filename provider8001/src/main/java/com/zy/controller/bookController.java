@@ -4,6 +4,7 @@ import com.zy.domain.BsBook;
 import com.zy.mapper.BsBookMapper;
 import com.zy.service.BsBookService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -30,4 +31,10 @@ public class bookController {
     public BsBook book3(){
         return BsBookMapper.selectById(33);
     }
+
+    @GetMapping("/{id}")
+    public BsBook getBook(@PathVariable("id") Integer id){
+        return BsBookMapper.selectById(id);
+    }
+
 }
