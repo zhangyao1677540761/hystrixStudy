@@ -1,6 +1,7 @@
 package com.zy.controller;
 
 import com.zy.client.Client;
+import com.zy.domain.BsBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,4 +27,8 @@ public class orderController {
         return client.book2();
     }
 
+    @GetMapping("/book3")
+    public BsBook book3(){
+        return client.book3();
+    }
 }

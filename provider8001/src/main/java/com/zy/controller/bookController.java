@@ -1,5 +1,6 @@
 package com.zy.controller;
 
+import com.zy.domain.BsBook;
 import com.zy.mapper.BsBookMapper;
 import com.zy.service.BsBookService;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,4 +26,8 @@ public class bookController {
         return BsBookMapper.selectById(32).toString();
     }
 
+    @GetMapping("/book3")
+    public BsBook book3(){
+        return BsBookMapper.selectById(33);
+    }
 }

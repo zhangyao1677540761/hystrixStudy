@@ -3,6 +3,7 @@ package com.zy.client;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import com.zy.domain.BsBook;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -27,6 +28,8 @@ public interface Client {
     @GetMapping("/book2")
     public String book2();
 
+    @GetMapping("/book3")
+    public BsBook book3();
 
 
 
