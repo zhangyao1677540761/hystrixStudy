@@ -17,13 +17,13 @@ public class bookController {
     BsBookMapper BsBookMapper;
 
     @GetMapping("/book1")
-    public String book1(){
-        return BsBookMapper.selectById(31).toString();
+    public BsBook book1(){
+        return BsBookMapper.selectById(31);
     }
 
     @GetMapping("/book2")
-    public String book2(){
-        return BsBookMapper.selectById(32).toString();
+    public BsBook book2(){
+        return BsBookMapper.selectById(32);
     }
 
     @GetMapping("/book3")

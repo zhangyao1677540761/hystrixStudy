@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zy.mapper.BsBookMapper">
 
-    <resultMap id="BaseResultMap" type="com.zy.domain.BsBook">
+    <resultMap id="BaseResultMap" type="com.zy.domain.BsBook2">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="title" column="title" jdbcType="VARCHAR"/>
             <result property="author" column="author" jdbcType="VARCHAR"/>

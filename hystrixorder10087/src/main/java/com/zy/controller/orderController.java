@@ -16,14 +16,14 @@ public class orderController {
     Client client;
 
     @GetMapping("/book1")
-    public String book1(){
+    public BsBook book1(){
 //        int i = 41/0;
         return client.book1();
     }
 
 
     @GetMapping("/book2")
-    public String book2(){
+    public BsBook book2(){
         return client.book2();
     }
 

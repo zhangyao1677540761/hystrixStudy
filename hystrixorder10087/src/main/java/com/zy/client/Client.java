@@ -1,8 +1,5 @@
 package com.zy.client;
 
-import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.zy.domain.BsBook;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,11 +19,10 @@ public interface Client {
 //            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds"
 //                    ,value = "3000")
 //    })//必须是在同一个类中的方法,HystrixProperty是触发条件
-    public String book1();
-
+    public BsBook book1();
 
     @GetMapping("/book2")
-    public String book2();
+    public BsBook book2();
 
     @GetMapping("/book3")
     public BsBook book3();

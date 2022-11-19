@@ -1,6 +1,5 @@
 package com.zy.client;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zy.domain.BsBook;
 import org.springframework.stereotype.Component;
 
@@ -10,17 +9,23 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClientFallBack implements Client{
     @Override
-    public String book1() {
-        return "出错了,出错了";
+    public BsBook book1() {
+        BsBook book = new BsBook();
+        book.setTitle("出错了");
+        return book;
     }
 
     @Override
-    public String book2() {
-        return "出错了,出错了";
+    public BsBook book2() {
+        BsBook book = new BsBook();
+        book.setTitle("出错了");
+        return book;
     }
 
     @Override
     public BsBook book3() {
-        return null;
+        BsBook book = new BsBook();
+        book.setTitle("出错了");
+        return book;
     }
 }
