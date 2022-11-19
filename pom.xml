@@ -8,6 +8,7 @@
         <module>provider8001</module>
         <module>turbine9001</module>
         <module>order10086</module>
+        <module>hystrixorder10087</module>
     </modules>
     <groupId>com.zy</groupId>
     <artifactId>hystrixStudy</artifactId>
